@@ -30,8 +30,8 @@ namespace Course
                 }
             }
 
-            var r1 = list.Where(e => e.Salary > 2000.0).OrderBy(e => e.Email).Select(e => e.Email);
-            Console.WriteLine("Email of people whose salary is more than 2000.00:");
+            var r1 = list.Where(e => e.Salary > searchedSalary).OrderBy(e => e.Email).Select(e => e.Email);
+            Console.WriteLine("Email of people whose salary is more than " + searchedSalary.ToString("F2", CultureInfo.InvariantCulture) + ":");
             foreach(string s in r1)
             {
                 Console.WriteLine(s);
